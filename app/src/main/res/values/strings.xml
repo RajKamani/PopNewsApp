@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Pop News</string>
+    <string name="share_app_menu">Share App</string>
+    <string name="about_us">About Us</string>
+    <string name="LinkedinLinkText">LinkedIn.com/rajkamani</string>
+    <string name="github_com_link">github.com/rajkamani</string>
+    <string name="AboutME">Hi Users ! I am Android Enthusiastic. Follow for More App like this.</string>
+    <string name="DevName">Rajdeep Kamani</string>
+    <string name="DevTag">Developer :</string>
+    <string name="imageDES">Image</string>
+    <string name="nullvalue">Not Provided | Go to Full article</string>
+</resources>
