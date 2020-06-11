@@ -1,6 +1,7 @@
 package com.rajkamani.popnews;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -12,14 +13,17 @@ import java.util.Objects;
 
 public class AboutUs extends AppCompatActivity {
     Intent intent;
-
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_us);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("About Developer");
+        toolbar = findViewById(R.id.toolbar);
+
+        setSupportActionBar(toolbar);
+       Objects.requireNonNull(getSupportActionBar()).setTitle("About Developer");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+       getSupportActionBar().setDisplayShowHomeEnabled(true);
 
     }
 

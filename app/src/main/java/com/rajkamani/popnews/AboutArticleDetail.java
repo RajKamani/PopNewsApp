@@ -15,23 +15,23 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toolbar;
 
-import com.github.ybq.android.spinkit.SpinKitView;
+//import com.github.ybq.android.spinkit.SpinKitView;
 
 import java.util.Objects;
 
 public class AboutArticleDetail extends OnOptionMenuCreated {
     WebView webView;
-    SpinKitView spinKitView;
+    //SpinKitView spinKitView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_article_detail);
         webView = findViewById(R.id.webview);
-        spinKitView = findViewById(R.id.spin_kit2);
+     //   spinKitView = findViewById(R.id.spin_kit2);
 
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Detail Article");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
+      //  Objects.requireNonNull(getSupportActionBar()).setTitle("Detail Article");
+       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+      //  getSupportActionBar().setDisplayShowHomeEnabled(true);
         webView.setVisibility(View.INVISIBLE);
         String url = getIntent().getStringExtra("Url");
        webView.getSettings().setJavaScriptEnabled(true);
@@ -46,7 +46,7 @@ public class AboutArticleDetail extends OnOptionMenuCreated {
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
-                spinKitView.setVisibility(View.GONE);
+              //  spinKitView.setVisibility(View.GONE);
                 webView.setVisibility(View.VISIBLE);
 
             }

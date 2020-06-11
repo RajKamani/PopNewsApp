@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         />
 
-    <com.github.ybq.android.spinkit.SpinKitView
+   <!-- <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/spin_kit2"
         style="@style/SpinKitView.Large.CubeGrid"
         android:layout_width="wrap_content"
@@ -23,5 +23,5 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:visibility="visible"
-        app:SpinKit_Color="@color/colorAccent" />
+        app:SpinKit_Color="@color/colorAccent" />-->
 </RelativeLayout>
