@@ -38,7 +38,7 @@
                     android:layout_marginBottom="3dp"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
-                    android:background="@color/ImageButton"
+                    android:background="@color/SelectedTabTextColor_Toolbar"
                     android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
             </FrameLayout>
         </RelativeLayout>

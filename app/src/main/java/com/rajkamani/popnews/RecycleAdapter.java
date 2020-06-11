@@ -2,6 +2,9 @@ package com.rajkamani.popnews;
 
 import android.content.Context;
 import android.content.Intent;
+import android.icu.util.DateInterval;
+import android.os.Build;
+import android.text.method.DateTimeKeyListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,11 +14,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.text.DateFormatSymbols;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -44,24 +49,19 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.HolderCl
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(@NonNull RecycleAdapter.HolderClass holder, int position) {
         final Article article = articlesList.get(position);
         Source source = sourcesList.get(position);
-        String date= article.getPublishedAt();
+        String date = article.getPublishedAt();
         holder.textAuthor.setText(chekingNull(article.getAuthor()));
         holder.textTitle.setText(chekingNull(article.getTitle()));
         holder.textContent.setText(chekingNull(article.getDescription()));
-        Date date1 = null;
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:MM", Locale.ENGLISH);
-        try {
-            date1 = simpleDateFormat.parse(date);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        date = date.replace("T", " ");
+        date = date.replace("Z", "");
 
-        assert date1 != null;
-        holder.textPublishedAt.setText(date1.toString());
+        holder.textPublishedAt.setText(date);
         holder.textName.setText(chekingNull(source.getName()));
 
         Glide.with(context).load(article.urlToImage).placeholder(R.drawable.ic_baseline_image_search_24).into(holder.imageView);
@@ -89,9 +89,8 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.HolderCl
 
     private String chekingNull(String data) {
         String values = "";
-        if(data.equals("null"))
-        {
-            values="Not Provided | Go for Article";
+        if (data.equals("null")) {
+            values = "Not Provided | Go for Article";
         } else {
             return data;
         }

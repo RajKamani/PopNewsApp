@@ -10,9 +10,7 @@
     <string name="imageDES">Image</string>
     <string name="nullvalue">Not Provided | Go to Full article</string>
 
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_test">test</string>
+    <!-- Tab Name of Tablayout-->
     <string name="Tab_home">Home</string>
     <string name="tab_business">Business</string>
     <string name="tab_tech">Technology</string>
@@ -20,4 +18,5 @@
     <string name="tab_sport">Sports</string>
     <string name="tab_science">Science</string>/
     <string name="tab_health">Health</string>
+    <string name="appVersion">Version 1.0</string>
 </resources>

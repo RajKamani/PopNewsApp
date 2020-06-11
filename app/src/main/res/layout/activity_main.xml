@@ -15,17 +15,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/toolbar"
-            android:background="@color/colorPrimary"
+            android:background="@color/SelectedTabTextColor_Toolbar"
             app:layout_scrollFlags="scroll|enterAlways"
             app:titleTextColor="#fff"/>
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:tabTextColor="#F4E9BD"
+            app:tabIndicatorColor="@color/SelectedTabTextColor_Toolbar"
+            app:tabTextAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            app:tabSelectedTextColor="@color/SelectedTabTextColor_Toolbar"
             app:tabMode="scrollable"
+            app:tabBackground="@drawable/tabselector"
             app:tabIndicatorAnimationDuration="2"
-            android:background="?attr/colorPrimary" />
+            android:background="@color/colorPrimaryDark" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager

@@ -6,13 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".AboutUs">
+
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
-        android:background="@color/colorPrimary"
+        android:background="@color/SelectedTabTextColor_Toolbar"
+        android:theme="@style/MyCustom"
         app:layout_scrollFlags="scroll|enterAlways"
-        app:titleTextColor="#fff"/>
+        app:titleTextColor="#FFF" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -75,8 +77,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:src="@drawable/linkedin"
-                    android:contentDescription="@string/imageDES" />
+                    android:contentDescription="@string/imageDES"
+                    android:src="@drawable/linkedin" />
 
 
                 <TextView
@@ -102,8 +104,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:src="@drawable/github"
-                    android:contentDescription="@string/imageDES" />
+                    android:contentDescription="@string/imageDES"
+                    android:src="@drawable/github" />
 
                 <TextView
                     android:id="@+id/github"
@@ -125,6 +127,15 @@
 
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/appVersion"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryDark"/>
 
 
 </LinearLayout>

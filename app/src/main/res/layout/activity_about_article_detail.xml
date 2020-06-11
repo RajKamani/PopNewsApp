@@ -14,8 +14,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        android:background="@color/SelectedTabTextColor_Toolbar"
+        android:theme="@style/MyCustom"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:titleTextColor="#FFF"/>
 
-   <!-- <com.github.ybq.android.spinkit.SpinKitView
+    <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/spin_kit2"
         style="@style/SpinKitView.Large.CubeGrid"
         android:layout_width="wrap_content"
@@ -23,5 +31,5 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:visibility="visible"
-        app:SpinKit_Color="@color/colorAccent" />-->
+        app:SpinKit_Color="@color/SelectedTabTextColor_Toolbar" />
 </RelativeLayout>
