@@ -4,7 +4,10 @@ Hello friends,<br>
 I have created a very Basic News App. which fetch data from API. 
 
 <h2>Screenshot </h2>
+![](https://user-images.githubusercontent.com/35796349/85946186-29f2d300-b960-11ea-9313-89432c388e6f.jpg)
+![](https://user-images.githubusercontent.com/35796349/85946187-2cedc380-b960-11ea-818e-4be013629f95.jpg)
 
+<img src="https://user-images.githubusercontent.com/35796349/85946186-29f2d300-b960-11ea-9313-89432c388e6f.jpg"/>
 
 <b>further details as follow : </b>
 
