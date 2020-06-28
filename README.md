@@ -4,14 +4,15 @@ Hello friends,<br>
 I have created a very Basic News App. which fetch data from API. 
 
 <h2>Screenshot </h2>
-![ss1](https://github.com/RajKamani/PopNewsApp/blob/master/Screenshot/Screenshot_2020-06-28-15-58-49-559_com.rajkamani.popnews.jpg)
-
+			<img src=https://github.com/RajKamani/PopNewsApp/blob/master/Screenshot/Screenshot_2020-06-28-15-58-49-559_com.rajkamani.popnews.jpg width=300 height=600 alt=ss1/>
+			<img src=https://github.com/RajKamani/PopNewsApp/blob/master/Screenshot/Screenshot_2020-06-28-15-59-06-098_com.rajkamani.popnews.jpg width=300 height=600 alt=ss2/>
+		
+  
 <b>further details as follow : </b>
-
-<h2>API Used </h2>
- https://newsapi.org/
- <p> If You want to create your app like i have created then you must find news API from above link and generate a Key.
-<br> After Getting your key You must have to place key in<b> Constants.java </b> file.<p>
+<h2>API Used </h2> 
+https://newsapi.org/
+			 <p>If You want to create your app like i have created then you must find news API from above link and generate a Key.
+<br> After Getting your key You must have to place key in<b> Constants.java </b> file.</p>
    
     static final String BaseUrl ="https://newsapi.org/v2/top-headlines?country=in&apiKey=";
     static final String API_KEY="Your Api key goes here";
