@@ -4,7 +4,7 @@ Hello friends,<br>
 I have created a very Basic News App. which fetch data from API. 
 
 <h2>Screenshot </h2>
-![ss1](https://user-images.githubusercontent.com/35796349/85946186-29f2d300-b960-11ea-9313-89432c388e6f.jpg)
+![ss1](https://github.com/RajKamani/PopNewsApp/blob/master/Screenshot/Screenshot_2020-06-28-15-58-49-559_com.rajkamani.popnews.jpg)
 
 <b>further details as follow : </b>
 
