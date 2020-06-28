@@ -4,8 +4,7 @@ Hello friends,<br>
 I have created a very Basic News App. which fetch data from API. 
 
 <h2>Screenshot </h2>
-
-<img src="https://user-images.githubusercontent.com/35796349/85946186-29f2d300-b960-11ea-9313-89432c388e6f.jpg" width="300" eight="550"/><span><img src="https://user-images.githubusercontent.com/35796349/85946187-2cedc380-b960-11ea-818e-4be013629f95.jpg" width="300" eight="550"/></span>
+![ss1](https://user-images.githubusercontent.com/35796349/85946186-29f2d300-b960-11ea-9313-89432c388e6f.jpg)
 
 <b>further details as follow : </b>
 
