@@ -4,8 +4,7 @@ Hello friends,<br>
 I have created a very Basic News App. which fetch data from API. 
 
 <h2>Screenshot </h2>
-			<img src=https://github.com/RajKamani/PopNewsApp/blob/master/Screenshot/Screenshot_2020-06-28-15-58-49-559_com.rajkamani.popnews.jpg width=300 height=600 alt=ss1/>
-			<img src=https://github.com/RajKamani/PopNewsApp/blob/master/Screenshot/Screenshot_2020-06-28-15-59-06-098_com.rajkamani.popnews.jpg width=300 height=600 alt=ss2/>
+<img src=https://github.com/RajKamani/PopNewsApp/blob/master/Screenshot/Screenshot_2020-06-28-15-58-49-559_com.rajkamani.popnews.jpg width=300 height=600 alt=ss1/><span><img src=https://github.com/RajKamani/PopNewsApp/blob/master/Screenshot/Screenshot_2020-06-28-15-59-06-098_com.rajkamani.popnews.jpg width=300 height=600 alt=ss2/></span>
 		
   
 <b>further details as follow : </b>
