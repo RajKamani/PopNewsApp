@@ -6,7 +6,7 @@
     <string name="github_com_link">github.com/rajkamani</string>
     <string name="AboutME">Hi Users ! I am Android Enthusiastic. Follow for More App like this.</string>
     <string name="DevName">Rajdeep Kamani</string>
-    <string name="DevTag">Developer :</string>
+    <string name="DevTag">Developed By - </string>
     <string name="imageDES">Image</string>
     <string name="nullvalue">Not Provided | Go to Full article</string>
 
@@ -19,4 +19,5 @@
     <string name="tab_science">Science</string>/
     <string name="tab_health">Health</string>
     <string name="appVersion">Version 1.0</string>
+    <string name="splash_logo">Splash Logo</string>
 </resources>

@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".SplashScreen">
 
- <ImageView
-     android:layout_width="100dp"
-     android:layout_height="100dp"
-     android:id="@+id/logo"
-     android:src="@drawable/ic_baseline_arrow_forward_ios_24"
-     android:layout_centerVertical="true"
-     android:background="@color/colorPrimary"
-     android:layout_centerHorizontal="true"/>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:contentDescription="@string/splash_logo"
+        android:paddingStart="18dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo" />
 
 </RelativeLayout>

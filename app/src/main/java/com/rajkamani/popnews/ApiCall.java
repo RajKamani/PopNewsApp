@@ -1,6 +1,11 @@
 package com.rajkamani.popnews;
 
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Handler;
+import android.os.Looper;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -20,22 +25,27 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class ApiCall {
+    SpinKitView spinKitView;
     String url;
     Context context;
     RecyclerView recyclerView;
-    SpinKitView spinKitView;
+    boolean isConnected;
 
 
     public ApiCall(String url, Context context, RecyclerView recyclerView, SpinKitView spinKitView) {
         this.url = url;
         this.context = context;
         this.recyclerView = recyclerView;
-        this.spinKitView=spinKitView;
+        this.spinKitView = spinKitView;
     }
 
     public void apiFetch() {
-         spinKitView.setVisibility(View.VISIBLE);
+
+        spinKitView.setVisibility(View.VISIBLE);
+
+
         final ArrayList<Article> articlesList = new ArrayList<>();
         final List<Source> sourcesList = new ArrayList<>();
         RequestQueue queue = VolleySingleton.getInstance(context).getRequestQueue();
@@ -72,7 +82,7 @@ public class ApiCall {
 
                         RecycleAdapter recycleAdapter = new RecycleAdapter(context, articlesList, sourcesList);
                         recyclerView.setAdapter(recycleAdapter);
-                        spinKitView.setVisibility(View.GONE);
+                        spinKitView.setVisibility(View.INVISIBLE);
 
 
                     }
@@ -87,7 +97,33 @@ public class ApiCall {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context, error.getMessage() + "On error", Toast.LENGTH_SHORT).show();
+                Thread T = new Thread() {
+
+                    @Override
+                    public void run() {
+                        while (true) {
+                            ConnectivityManager cm =
+                                    (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+
+                            NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+                            isConnected = activeNetwork != null &&
+                                    activeNetwork.isConnectedOrConnecting();
+                            if (isConnected) {
+                                apiFetch();
+                                break;
+                                //Log.e("C","NO InternetConnetion");
+                                //  Toast.makeText(context, "No internet Connection", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                    }
+                };
+                T.start();
+                    if (!isConnected) {
+
+                        Toast.makeText(context, "No internet Connection", Toast.LENGTH_SHORT).show();
+                    }
+
             }
         });
         VolleySingleton.getInstance(context).addToRequestQueue(jsonObjectRequest);

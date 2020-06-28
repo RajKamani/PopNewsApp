@@ -14,12 +14,13 @@
 
     <com.github.ybq.android.spinkit.SpinKitView
          android:id="@+id/spin_kit"
-         style="@style/SpinKitView.Large.CubeGrid"
+         style="@style/SpinKitView.Large.FoldingCube"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
         android:layout_centerInParent="true"
          android:layout_gravity="center"
-         android:visibility="visible"
+         android:visibility="invisible"
+
          app:SpinKit_Color="@color/SelectedTabTextColor_Toolbar" />
 
 </RelativeLayout>
