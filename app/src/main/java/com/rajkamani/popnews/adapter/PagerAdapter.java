@@ -1,4 +1,4 @@
-package com.rajkamani.popnews;
+package com.rajkamani.popnews.adapter;
 
 import android.content.Context;
 
@@ -7,6 +7,15 @@ import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.rajkamani.popnews.R;
+import com.rajkamani.popnews.fragment.Frag_business;
+import com.rajkamani.popnews.fragment.Frag_entertainment;
+import com.rajkamani.popnews.fragment.Frag_health;
+import com.rajkamani.popnews.fragment.Frag_home;
+import com.rajkamani.popnews.fragment.Frag_science;
+import com.rajkamani.popnews.fragment.Frag_sports;
+import com.rajkamani.popnews.fragment.Frag_tech;
 
 
 public class PagerAdapter extends FragmentPagerAdapter {

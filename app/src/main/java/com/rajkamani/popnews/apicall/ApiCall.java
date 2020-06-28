@@ -1,11 +1,8 @@
-package com.rajkamani.popnews;
+package com.rajkamani.popnews.apicall;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Handler;
-import android.os.Looper;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -17,6 +14,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.github.ybq.android.spinkit.SpinKitView;
+import com.rajkamani.popnews.model.Article;
+import com.rajkamani.popnews.adapter.RecycleAdapter;
+import com.rajkamani.popnews.model.Source;
+import com.rajkamani.popnews.VolleySingleton.VolleySingleton;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -111,9 +112,7 @@ public class ApiCall {
                             if (isConnected) {
                                 apiFetch();
                                 break;
-                                //Log.e("C","NO InternetConnetion");
-                                //  Toast.makeText(context, "No internet Connection", Toast.LENGTH_SHORT).show();
-                            }
+                                                           }
                         }
 
                     }

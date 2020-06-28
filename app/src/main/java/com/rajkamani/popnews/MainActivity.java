@@ -1,24 +1,19 @@
 package com.rajkamani.popnews;
 
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+import com.rajkamani.popnews.adapter.PagerAdapter;
 
 public class MainActivity extends OnOptionMenuCreated {
 
 
    TabLayout tabLayout;
    ViewPager viewPager;
-   PagerAdapter PagerAdapter;
+   com.rajkamani.popnews.adapter.PagerAdapter PagerAdapter;
    Toolbar toolbar;
 
     @Override

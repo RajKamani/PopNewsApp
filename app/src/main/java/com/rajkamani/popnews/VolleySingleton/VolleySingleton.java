@@ -1,4 +1,4 @@
-package com.rajkamani.popnews;
+package com.rajkamani.popnews.VolleySingleton;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.rajkamani.popnews;
+package com.rajkamani.popnews.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.ybq.android.spinkit.SpinKitView;
+import com.rajkamani.popnews.apicall.ApiCall;
+import com.rajkamani.popnews.constant.Constants;
+import com.rajkamani.popnews.R;
 
 /**
  * A simple {@link Fragment} subclass.

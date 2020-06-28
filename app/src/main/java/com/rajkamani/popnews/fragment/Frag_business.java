@@ -1,4 +1,4 @@
-package com.rajkamani.popnews;
+package com.rajkamani.popnews.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,16 +10,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.ybq.android.spinkit.SpinKitView;
+import com.rajkamani.popnews.apicall.ApiCall;
+import com.rajkamani.popnews.constant.Constants;
+import com.rajkamani.popnews.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * create an instance of this fragment.
  */
-public class Frag_health extends Fragment {
+public class Frag_business extends Fragment {
     RecyclerView recyclerView;
     SpinKitView spinKitView;
 
-    public Frag_health() {
+    public Frag_business() {
         // Required empty public constructor
     }
 
@@ -30,7 +33,7 @@ public class Frag_health extends Fragment {
         recyclerView = view.findViewById(R.id.recycleView);
         spinKitView = view.findViewById(R.id.spin_kit);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        ApiCall apiCall = new ApiCall(Constants.health_url, getContext(), recyclerView, spinKitView);
+        ApiCall apiCall = new ApiCall(Constants.business_url, getContext(), recyclerView, spinKitView);
         apiCall.apiFetch();
         return view;
     }

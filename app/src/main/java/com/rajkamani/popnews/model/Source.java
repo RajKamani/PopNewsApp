@@ -1,4 +1,4 @@
-package com.rajkamani.popnews;
+package com.rajkamani.popnews.model;
 
 public class Source {
     String sName;

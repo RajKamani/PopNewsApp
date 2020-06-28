@@ -1,7 +1,12 @@
-package com.rajkamani.popnews;
+package com.rajkamani.popnews.model;
 
 public class Article {
-    String Author, Title, Description, urlToArticle, urlToImage, PublishedAt;
+    String Author;
+    String Title;
+    String Description;
+    String urlToArticle;
+    String urlToImage;
+    String PublishedAt;
 
     public Article() {
     }

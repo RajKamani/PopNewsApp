@@ -1,4 +1,4 @@
-package com.rajkamani.popnews;
+package com.rajkamani.popnews.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +16,10 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.rajkamani.popnews.AboutArticleDetail;
+import com.rajkamani.popnews.R;
+import com.rajkamani.popnews.model.Article;
+import com.rajkamani.popnews.model.Source;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,16 +50,16 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.HolderCl
         final Article article = articlesList.get(position);
         Source source = sourcesList.get(position);
         String date = article.getPublishedAt();
-        holder.textAuthor.setText(chekingNull(article.getAuthor()));
-        holder.textTitle.setText(chekingNull(article.getTitle()));
-        holder.textContent.setText(chekingNull(article.getDescription()));
+        holder.textAuthor.setText(checkingNull(article.getAuthor()));
+        holder.textTitle.setText(checkingNull(article.getTitle()));
+        holder.textContent.setText(checkingNull(article.getDescription()));
         date = date.replace("T", " ");
         date = date.replace("Z", "");
 
         holder.textPublishedAt.setText(date);
-        holder.textName.setText(chekingNull(source.getName()));
+        holder.textName.setText(checkingNull(source.getName()));
 
-        Glide.with(context).load(article.urlToImage).placeholder(R.drawable.ic_baseline_image_search_24).into(holder.imageView);
+        Glide.with(context).load(article.getUrlToImage()).placeholder(R.drawable.ic_baseline_image_search_24).into(holder.imageView);
         holder.imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,8 +82,8 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.HolderCl
 
     }
 
-    private String chekingNull(String data) {
-        String values = "";
+    private String checkingNull(String data) {
+        String values;
         if (data.equals("null")) {
             values = "Not Provided | Go for Article";
         } else {
